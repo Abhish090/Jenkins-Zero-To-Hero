@@ -1,4 +1,5 @@
-pipeline {
+
+ pipeline {
   agent none
   stages {
     stage('Back-end') {
@@ -14,11 +15,7 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
-        sh 'public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World! 👋😊");
-    }
-}
+        sh 'node --version'
       }
     }
   }
